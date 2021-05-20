@@ -1,0 +1,85 @@
+<template>
+  <header>
+
+    <img src="../assets/img/dc-logo.png" alt="">
+    
+    <ul>
+      <li v-for="(menu, index) in menuList" :key="index"
+        :class="menu.active ? 'active': null"
+      >
+        <a href="#">{{ menu.name }}</a>
+      </li>
+    </ul>
+  </header>
+</template>
+
+<script>
+export default {
+  name: 'Header',
+  data(){
+    return{
+      menuList:[
+        {
+          name: 'Characters',
+          url: '/',
+          active:'false',
+        },
+        {
+          name: 'Comics',
+          url: '#',
+          active:'true',
+        },
+        {
+          name: 'Movies',
+          url: '#',
+          active:'false',
+        },
+        {
+          name: 'Tv',
+          url: '#',
+          active:'false',
+        },
+        {
+          name: 'Games',
+          url: '#',
+          active:'false',
+        },
+        {
+          name: 'Collectibles',
+          url: '#',
+          active:'false',
+        },
+        {
+          name: 'Videos',
+          url: '#',
+          active:'false',
+        },
+        {
+          name: 'Fans',
+          url: '#',
+          active:'false',
+        },
+        {
+          name: 'News',
+          url: '#',
+          active:'false',
+        },
+        {
+          name: 'Shop',
+          url: '#',
+          active:'false',
+        },
+      ]
+    }
+  }
+}
+</script>
+
+
+<style scoped lang="scss">
+@import '../assets/styles/vars.scss';
+
+a:hover {
+  color: $brand-color;  
+}
+</style>
