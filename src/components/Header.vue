@@ -4,9 +4,7 @@
     <img src="../assets/img/dc-logo.png" alt="">
     
     <ul>
-      <li v-for="(menu, index) in menuList" :key="index"
-        :class="menu.active ? 'active': null"
-      >
+      <li v-for="(menu, index) in menuList" :key="index">
         <a href="#">{{ menu.name }}</a>
       </li>
     </ul>
@@ -80,6 +78,11 @@ export default {
 @import '../assets/styles/vars.scss';
 
 a:hover {
-  color: $brand-color;  
+  color: $brand-color;
 }
+
+a:hover::after{
+  background-color: $brand-color;
+}
+
 </style>

@@ -8,19 +8,3 @@
   justify-content: space-between;
   align-items: center;
 }
-
-.margin-top-20 {
-  margin-top: 20px;
-}
-.active{
-  position: relative;
-}
-
-.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  color: inherit;
-  height: 3px;
-  width: 100px;
-}

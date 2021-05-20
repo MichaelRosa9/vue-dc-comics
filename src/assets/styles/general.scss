@@ -8,11 +8,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
+header { 
   height: 115px;
 
   img {
-    width: 10%;
+    width: 100px;
   }
 
   ul {  
@@ -28,12 +28,29 @@ header {
     }
 
     a {
+      position: relative;
       color: black;
+
+      &:hover {
+        position: relative;
+        color: inherit;
+      }
+
+      &:hover::after{
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        width: 40px;
+        background-color: inherit;
+      }
       
     }
   
   }
-}
+}//END header
 
 ul {
   list-style: none;
@@ -42,4 +59,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+main {
+  padding-top: 60px;
+  padding-bottom: 55px;
+  background-color: black;
+  color: white;
 }
