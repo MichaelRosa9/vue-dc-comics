@@ -77,6 +77,46 @@ export default {
 <style scoped lang="scss">
 @import '../assets/styles/vars.scss';
 
+
+img {
+    width: 100px;
+  }
+
+  ul {  
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    li {      
+      font-size: 13px;
+      margin: 0 14px;
+      text-transform: uppercase;
+
+    }
+
+    a {
+      position: relative;
+      color: black;
+
+      &:hover {
+        position: relative;
+        color: inherit;
+      }
+
+      &:hover::after{
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        width: 40px;
+        background-color: inherit;
+      }
+      
+    }
+  
+  }
 a:hover {
   color: $brand-color;
 }
