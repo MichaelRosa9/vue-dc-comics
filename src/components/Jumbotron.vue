@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Button from './Button-blue.vue'
+import Button from '@/components/Button-blue.vue'
 
 export default {
   name: 'Jumbotron',

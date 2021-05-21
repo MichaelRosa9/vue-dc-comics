@@ -14,7 +14,7 @@
 <script>
 import Comics from '@/assets/data/dc-comics.json';
 import Card from './Card.vue';
-import Button from './Button-blue.vue'
+import Button from '@/components/Button-blue.vue'
 
 export default {
   name: 'Main',

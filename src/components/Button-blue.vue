@@ -10,7 +10,7 @@
 export default {
   name: 'Button',
   props: {
-    button_text: Object
+    button_text: String
   }
 }
 </script>

@@ -4,8 +4,8 @@
     <Header class="container flex-center-between" />
     <Jumbotron />
     <Main class="" />
+    <Banner />
     <Footer class="" />
-
   </div>
 </template>
 
@@ -13,6 +13,7 @@
 import Header from './components/Header.vue'
 import Jumbotron from './components/Jumbotron.vue'
 import Main from './components/Main.vue'
+import Banner from './components/Banner.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -21,7 +22,8 @@ export default {
     Header,
     Main,
     Footer,
-    Jumbotron
+    Jumbotron,
+    Banner
   }  
 }
 </script>
