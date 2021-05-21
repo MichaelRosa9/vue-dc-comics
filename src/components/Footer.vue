@@ -210,12 +210,13 @@ export default {
   height: 110px;
   background-color: #2a2a2a;
   text-transform: uppercase;
-  
+   
   button {
     background-color: inherit;
     padding: 10px;
     border: solid 2px $brand-color;
     color: white;
+    cursor: pointer;
   }
 
   h3 {

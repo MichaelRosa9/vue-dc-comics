@@ -100,29 +100,22 @@ img {
 
       &:hover {
         position: relative;
-        color: inherit;
+        color: $brand-color;
       }
 
-      &:hover::after{
+      &:hover::after {
         content: '';
         position: absolute;
-        bottom: -50px;
+        bottom: -42px;
         left: 50%;
         transform: translateX(-50%);
         height: 3px;
         width: 40px;
-        background-color: inherit;
+        background-color: $brand-color;
       }
       
     }
   
   }
-a:hover {
-  color: $brand-color;
-}
-
-a:hover::after{
-  background-color: $brand-color;
-}
 
 </style>

@@ -1,8 +1,10 @@
 <template>
   <main>
 
-  <div class="container">
-    <h1> --&gt; Content goes here &lt;-- </h1>
+  <div class="container flex-between wrap">
+    <Card v-for="(comic, index) in Comics" :key="index" 
+      :card="comic" class="card"
+    />
     
   </div>
     
@@ -10,11 +12,18 @@
 </template>
 
 <script>
+import Comics from '@/assets/data/dc-comics.json';
+
+import Card from './Card.vue';
+
 export default {
   name: 'Main',
+  components: {
+    Card
+  },
   data(){
     return{
-      
+      Comics
     }
   }
 }
@@ -24,5 +33,9 @@ export default {
 <style scoped lang="scss">
 
 @import '../assets/styles/vars.scss';
+
+.card {
+  flex-basis: calc(100% / 6);
+}
 
 </style>

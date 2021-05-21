@@ -2,6 +2,7 @@
   <div id="app">
 
     <Header class="container flex-center-between" />
+    <Jumbotron />
     <Main class="" />
     <Footer class="" />
 
@@ -10,6 +11,7 @@
 
 <script>
 import Header from './components/Header.vue'
+import Jumbotron from './components/Jumbotron.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
 
@@ -18,8 +20,9 @@ export default {
   components: {
     Header,
     Main,
-    Footer
-  }
+    Footer,
+    Jumbotron
+  }  
 }
 </script>
 
