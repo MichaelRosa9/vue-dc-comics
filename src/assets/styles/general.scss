@@ -8,10 +8,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header { 
-  height: 115px;
-}
-
 ul {
   list-style: none;
 }
@@ -22,8 +18,9 @@ a {
 }
 
 main {
+  width: 100%;
   padding-top: 60px;
-  padding-bottom: 55px;
-  background-color: black;
+  padding-bottom: 20px;
+  background-color: #1A1A1A;
   color: white;
 }

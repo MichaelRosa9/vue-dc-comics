@@ -77,6 +77,9 @@ export default {
 <style scoped lang="scss">
 @import '../assets/styles/vars.scss';
 
+header { 
+  height: 115px;
+}
 
 img {
     width: 100px;

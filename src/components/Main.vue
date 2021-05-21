@@ -5,25 +5,27 @@
     <Card v-for="(comic, index) in Comics" :key="index" 
       :card="comic" class="card"
     />
-    
   </div>
     
+  <Button class="button" :button_text="text"/>
   </main>
 </template>
 
 <script>
 import Comics from '@/assets/data/dc-comics.json';
-
 import Card from './Card.vue';
+import Button from './Button-blue.vue'
 
 export default {
   name: 'Main',
   components: {
-    Card
+    Card,
+    Button
   },
   data(){
     return{
-      Comics
+      Comics,
+      text: 'Load More'
     }
   }
 }
@@ -36,6 +38,14 @@ export default {
 
 .card {
   flex-basis: calc(100% / 6);
+}
+
+.button {
+  display: block;
+  margin: 50px auto 0;
+  padding: 15px 65px;       
+  box-shadow: 0 0 2px #000000;
+  font-size: 12px;
 }
 
 </style>

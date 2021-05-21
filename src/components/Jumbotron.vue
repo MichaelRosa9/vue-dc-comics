@@ -2,19 +2,26 @@
 
   <div class="jumbotron">
     <div class="container">
-    <button>
-      Current Series
-    </button>
+      <Button class="button" :button_text="text"/>
+    
     </div>
   </div>
 
 </template>
 
 <script>
-
+import Button from './Button-blue.vue'
 
 export default {
   name: 'Jumbotron',
+  components: {
+    Button
+  },
+  data(){
+    return{
+      text: 'current series'
+    }
+  }
 }
 </script>
 
@@ -26,20 +33,13 @@ export default {
     height: 400px;
     background-image: url('~@/assets/img/jumbotron.jpg');
     
-    button {
+    .button {
       position: absolute;
       bottom: -25px;
       height: 55px;
-      width: 250px;
-      border: none;
+      width: 250px;     
       box-shadow: 0 0 2px #000000;
       font-size: 23px;
-      font-weight: 600;
-      color: white;
-      text-transform: uppercase;
-      background-color: $brand-color;
-      cursor: pointer;
-
     }
   }
 </style>>
