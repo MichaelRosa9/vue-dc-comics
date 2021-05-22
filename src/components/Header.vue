@@ -4,10 +4,13 @@
     <img src="../assets/img/dc-logo.png" alt="">
     
     <ul>
-      <li v-for="(menu, index) in menuList" :key="index">
-        <a  href="#" class="border-underline"
+      <li class="border-underline" 
+        v-for="(menu, index) in menuList" :key="index"
+        :class="menu.isActive === true ? 'active' : ''"
+      >
+        <a  href="#" 
           @click="focus(menu, index)"
-          :class="menu.isActive === true ? 'active' : ''"
+          
         >{{ menu.name }}</a>
       </li>
     </ul>
@@ -104,10 +107,13 @@ img {
 
   ul {  
     height: 100%;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 
     li {
+      display: inline-block;
+      padding-top: 50px;
+      height: 100%;
       font-size: 13px;
       margin: 0 14px;
       text-transform: uppercase;
@@ -123,37 +129,35 @@ img {
       }
       
       
+    }
 
-      
-      &.active::after {
+    .border-underline {
+      position: relative;
+      &.active::after,
+      &::after {
         content: '';
         position: absolute;
-        bottom: -50px;
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         height: 3px;
-        width: 100%;
         background-color: $brand-color;
       }
-      &:after:hover {
+      
+      &.active::after {
         width: 100%;
+      }
+
+      //transition effect
+      &::after {          
+        width: 0px;            
+      }
+      &:hover::after {
+        width: 100%;
+        transition: width linear 300ms;
       }
     }
 
-    .border-underline::after {
-        content: '';
-        position: absolute;
-        bottom: -50px;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 3px;
-        width: 0px;
-        background-color: $brand-color;        
-    }
-    .border-underline:hover::after {
-      width: 100%;
-      transition: width linear 300ms;
-    }
   } //END ul
 
 </style>
