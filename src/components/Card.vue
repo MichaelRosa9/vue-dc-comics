@@ -21,6 +21,9 @@ export default {
 
 <style lang="scss" scoped>
 
+img, h4 {
+  cursor: pointer;
+}
 img {
   height: 190px;
   width: 190px;

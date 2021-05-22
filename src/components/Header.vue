@@ -5,7 +5,10 @@
     
     <ul>
       <li v-for="(menu, index) in menuList" :key="index">
-        <a href="#">{{ menu.name }}</a>
+        <a  href="#" class="border-underline"
+          @click="focus(menu, index)"
+          :class="menu.isActive === true ? 'active' : ''"
+        >{{ menu.name }}</a>
       </li>
     </ul>
   </header>
@@ -13,61 +16,75 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: 'Header',  
   data(){
     return{
       menuList:[
         {
           name: 'Characters',
           url: '/',
-          active:'false',
+          isActive: false,
         },
         {
           name: 'Comics',
           url: '#',
-          active:'true',
+          isActive: true,
         },
         {
           name: 'Movies',
           url: '#',
-          active:'false',
+          isActive: false,
         },
         {
           name: 'Tv',
           url: '#',
-          active:'false',
+          isActive: false,
         },
         {
           name: 'Games',
           url: '#',
-          active:'false',
+          isActive: false,
         },
         {
           name: 'Collectibles',
           url: '#',
-          active:'false',
+          isActive: false,
         },
         {
           name: 'Videos',
           url: '#',
-          active:'false',
+          isActive: false,
         },
         {
           name: 'Fans',
           url: '#',
-          active:'false',
+          isActive: false,
         },
         {
           name: 'News',
           url: '#',
-          active:'false',
+          isActive: false,
         },
         {
           name: 'Shop',
           url: '#',
-          active:'false',
+          isActive: false,
         },
       ]
+    }
+  },
+  methods: {
+    focus(obj) { //funzione per il click degli li nel header
+      console.log(obj);
+      if(obj.isActive === true){
+        obj.isActive = false
+        console.log(obj);
+      }else{
+        this.menuList.forEach((menu) => {
+          menu.isActive = false;
+          obj.isActive = true;
+        });
+      }
     }
   }
 }
@@ -90,11 +107,10 @@ img {
     display: flex;
     align-items: center;
 
-    li {      
+    li {
       font-size: 13px;
       margin: 0 14px;
       text-transform: uppercase;
-
     }
 
     a {
@@ -105,20 +121,39 @@ img {
         position: relative;
         color: $brand-color;
       }
+      
+      
 
-      &:hover::after {
+      
+      &.active::after {
         content: '';
         position: absolute;
-        bottom: -42px;
+        bottom: -50px;
         left: 50%;
         transform: translateX(-50%);
         height: 3px;
-        width: 40px;
+        width: 100%;
         background-color: $brand-color;
       }
-      
+      &:after:hover {
+        width: 100%;
+      }
     }
-  
-  }
+
+    .border-underline::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        width: 0px;
+        background-color: $brand-color;        
+    }
+    .border-underline:hover::after {
+      width: 100%;
+      transition: width linear 300ms;
+    }
+  } //END ul
 
 </style>

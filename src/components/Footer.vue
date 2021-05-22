@@ -8,25 +8,25 @@
               DC COMICS
             </li>
             <li>
-              Characters
+              <a href="#">Characters</a>
             </li>
             <li>
-              Comics
+              <a href="#">Comics</a>
             </li>
             <li>
-              Movies
+              <a href="#">Movies</a>
             </li>
             <li>
-              TV
+              <a href="#">TV</a>
             </li>
             <li>
-              Games
+              <a href="#">Games</a>
             </li>
             <li>
-              Videos
+              <a href="#">Videos</a>
             </li>
             <li>
-              News
+              <a href="#">News</a>
             </li>
           </ul>
 
@@ -35,37 +35,37 @@
               DC
             </li>
             <li>
-              Terms Of Use
+              <a href="#">Terms Of Use</a>
             </li>
             <li>
-              Privacy policy&#40;New&#41;
+              <a href="#">Privacy policy&#40;New&#41;</a>
             </li>
             <li>
-              Ad Chioices
+              <a href="#">Ad Chioices</a>
             </li>
             <li>
-              Advertising
+              <a href="#">Advertising</a>
             </li>
             <li>
-              Jobs
+              <a href="#">Jobs</a>
             </li>
             <li>
-              Subscriptions
+              <a href="#">Subscriptions</a>
             </li>
             <li>
-              Talent Workshops
+              <a href="#">Talent Workshops</a>
             </li>
             <li>
-              CPSC Certificates
+              <a href="#">CPSC Certificates</a>
             </li>
             <li>
-              Ratings
+              <a href="#">Ratings</a>
             </li>
             <li>
-              Shop Help
+              <a href="#">Shop Help</a>
             </li>
             <li>
-              Contact Us
+              <a href="#">Contact Us</a>
             </li>
           </ul>
 
@@ -74,19 +74,19 @@
               Sites
             </li>
             <li>
-              DC
+              <a href="#">DC</a>
             </li>
             <li>
-              MAD Magazine
+              <a href="#">MAD Magazine</a>
             </li>
             <li>
-              DC Kids
+              <a href="#">DC Kids</a>
             </li>
             <li>
-              DC Universe
+              <a href="#">DC Universe</a>
             </li>
             <li>
-              DC Power Visa
+              <a href="#">DC Power Visa</a>
             </li>
           </ul>
 
@@ -95,10 +95,10 @@
               Shop
             </li>
             <li>
-              Shop DC
+              <a href="#">Shop DC</a>
             </li>
             <li>
-              Shop DC Collectibles
+              <a href="#">Shop DC Collectibles</a>
             </li>
           </ul>
         </div>
@@ -167,20 +167,28 @@ export default {
   .footer-list {
     position: relative;
     padding-top: 20px;
-    width: 450px;
+    width: 470px;
     float: left;
   }
 
   ul {
     color: grey;
     float: left;
-    padding-right: 40px;
+    padding-right: 45px;
 
     li {
       font-weight: 300;
       font-size: 13px;
       margin-bottom: 6px;
       white-space: nowrap;
+
+      a {
+        font-weight: 600;
+        color: inherit;
+      }
+      a:hover {
+        color: $brand-color
+      }
     }
   }
   ul:last-child {
@@ -214,9 +222,15 @@ export default {
   button {
     background-color: inherit;
     padding: 10px;
+    font-weight: 600;
     border: solid 2px $brand-color;
     color: white;
     cursor: pointer;
+
+    &:hover {
+      background-color: $brand-color;
+      transition: background-color 300ms linear;
+    }
   }
 
   h3 {
@@ -225,5 +239,10 @@ export default {
   li {
     margin-left: 20px;
   }
-}
+
+  img:hover {
+    opacity: .6;
+    transition: opacity 1s;
+  }
+} //END footer-bottom
 </style>

@@ -43,9 +43,11 @@ export default {
   height: 155px;
   width: 100%;
   background-color: $brand-color;
+
   & > div {
     padding: 0 20px;
   }
+  
   .item {
     color: white;
     text-transform: uppercase;
