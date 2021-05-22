@@ -58,9 +58,14 @@ export default {
       height: 50px;
       margin-right: 20px;
     }
-      &:last-child img{
-        width: 50px;
-      }
+    
+    &:last-child img{
+     width: 50px;
+   }
+
+   span {
+     font-size: 12px;
+   }
     
   }
 }
